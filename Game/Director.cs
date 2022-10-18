@@ -4,7 +4,7 @@ namespace Unit03.Game
 {
     public class Director
     {
-        bool isPlaying = true;
+        private bool isPlaying = true;
         TerminalService terminalService = new TerminalService();
 
         public Director()
