@@ -1,4 +1,4 @@
-﻿namespace Unit03.Game
+namespace Unit03.Game
 {
     class Program
     {
@@ -9,3 +9,4 @@
         }
     }
 }
+
