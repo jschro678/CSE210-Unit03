@@ -28,10 +28,30 @@ namespace Unit03.Game
 
         private void pickWord()
         {
-            Random random = new Random();
-            word = words[random.Next(0, 5)];
+        Random random = new Random();
+        int index = random.Next(wordDictionary.Count);
+        String randomWord = wordDictionary[index];
+        foreach (char x in randomWord)
         }
 
-        private void createHint() { }
+        private void createHint()
+        {
+        List<char> letters = new List<char>();
+        public List<char> guess = new List<char>();
+        }
+            private guessLetter(){
+        Console.WriteLine($"Guess a letter [a-z]: ")
+    }
+
+    private bool letterMatch = Word.updateHint();
+
+    private pickWord(){
+
+    }
+
+    private createHint(){
+
+    }
     }
 }
+
