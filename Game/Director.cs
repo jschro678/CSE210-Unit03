@@ -6,6 +6,8 @@ namespace Unit03.Game
     {
         private bool isPlaying = true;
         TerminalService terminalService = new TerminalService();
+        Jumper jumper = new Jumper();
+        Word word = new Word();
 
         public Director()
         {
