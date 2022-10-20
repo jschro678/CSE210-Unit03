@@ -29,7 +29,7 @@ namespace Unit03.Game
 
         private bool letterMatch = word.updateHint();
 
-        private Jumper() { }
+        public Jumper() { }
 
         private void updateJumper()
         {
