@@ -11,8 +11,8 @@ namespace Unit03.Game
 
         public Director()
         {
-            current_card = myCard.pick_card();
-            totalScore = 100;
+            // current_card = myCard.pick_card();
+            // totalScore = 100;
         }
 
         public void StartGame()
@@ -27,9 +27,9 @@ namespace Unit03.Game
 
         public void getInputs()
         {
-            Console.WriteLine($"This card is: {current_card}");
-            Console.Write("Higher or Lower? [h/l] ");
-            guess_card = Console.ReadLine();
+            // Console.WriteLine($"This card is: {current_card}");
+            word.inputGuess();
+            // guess_card = Console.ReadLine();
         }
 
         public void doUpdates() { }

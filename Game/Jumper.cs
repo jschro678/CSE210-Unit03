@@ -27,9 +27,12 @@ namespace Unit03.Game
         };
         Word word = new Word();
 
-        private bool letterMatch = word.updateHint();
+        private bool letterMatch = false;
 
-        public Jumper() { }
+        public Jumper()
+        {
+            // letterMatch = word.updateHint();
+        }
 
         private void updateJumper()
         {

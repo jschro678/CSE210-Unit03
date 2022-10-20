@@ -38,6 +38,14 @@ namespace Unit03.Game
             return Console.ReadLine();
         }
 
+        public char Readchar(string prompt)
+        {
+            Console.Write(prompt);
+            string sentence = "";
+            sentence = Console.ReadLine();
+            return sentence.ToCharArray()[0];
+        }
+
         /// <summary>
         /// Displays the given text on the terminal.
         /// </summary>

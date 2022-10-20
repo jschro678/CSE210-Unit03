@@ -17,6 +17,7 @@ namespace Unit03.Game
         private string word;
         private List<char> letters = new List<char> { };
         private char guessLetter;
+        private TerminalService terminalService = new TerminalService();
         private List<char> hint = new List<char> { };
         bool letterMatch;
 
@@ -28,30 +29,45 @@ namespace Unit03.Game
 
         private void pickWord()
         {
-        Random random = new Random();
-        int index = random.Next(wordDictionary.Count);
-        String randomWord = wordDictionary[index];
-        foreach (char x in randomWord)
+            Random random = new Random();
+            int index = random.Next(words.Count);
+            word = words[index];
         }
 
         private void createHint()
         {
-        List<char> letters = new List<char>();
-        public List<char> guess = new List<char>();
+            foreach (char x in word)
+            {
+                letters.Add(x);
+                hint.Add('_');
+            }
         }
-            private guessLetter(){
-        Console.WriteLine($"Guess a letter [a-z]: ")
-    }
 
-    private bool letterMatch = Word.updateHint();
+        private void updateHint()
+        {
+            foreach (char i in letters)
+            {
+                if (guessLetter == i)
+                {
+                    letterMatch = true;
+                    return;
+                }
+                else if (guessLetter != i)
+                {
+                    letterMatch = false;
+                }
+            }
+        }
 
-    private pickWord(){
+        public void inputGuess()
+        {
+            guessLetter = terminalService.Readchar($"Guess a letter [a-z]: ");
+            updateHint();
+        }
 
-    }
-
-    private createHint(){
-
-    }
+        public void displayword()
+        {
+            terminalService.WriteText(word);
+        }
     }
 }
-
