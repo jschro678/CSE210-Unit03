@@ -9,11 +9,7 @@ namespace Unit03.Game
         Jumper jumper = new Jumper();
         Word word = new Word();
 
-        public Director()
-        {
-            // current_card = myCard.pick_card();
-            // totalScore = 100;
-        }
+        public Director() { }
 
         public void StartGame()
         {
@@ -28,10 +24,12 @@ namespace Unit03.Game
         public void getInputs()
         {
             word.inputGuess();
-            jumper.updateJumper();
         }
 
-        public void doUpdates() { }
+        public void doUpdates()
+        {
+            jumper.updateJumper();
+        }
 
         public void getRender()
         {

@@ -27,6 +27,7 @@ namespace Unit03.Game
         };
 
         public bool letterMatch = false;
+        private bool isPlaying = true;
 
         public Jumper() { }
 
@@ -42,6 +43,7 @@ namespace Unit03.Game
                 else
                 {
                     drawing = deadDrawing;
+                    isPlaying = false;
                 }
             }
             else if (letterMatch)
