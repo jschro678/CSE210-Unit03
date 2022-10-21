@@ -73,6 +73,7 @@ namespace Unit03.Game
                     }
                 }
             }
+            terminalService.displaycharList(hint);
         }
 
         public void inputGuess()
@@ -81,11 +82,6 @@ namespace Unit03.Game
             guessLetter = Char.ToLower(guessLetter);
             checkGuess();
             updateHint();
-        }
-
-        public void displayword()
-        {
-            terminalService.WriteText(word);
         }
     }
 }

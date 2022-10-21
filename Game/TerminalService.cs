@@ -54,5 +54,13 @@ namespace Unit03.Game
         {
             Console.WriteLine(text);
         }
+
+        public void displaycharList(List<char> list)
+        {
+            foreach (var i in list)
+            {
+                Console.Write(i);
+            }
+        }
     }
 }
