@@ -27,9 +27,8 @@ namespace Unit03.Game
 
         public void getInputs()
         {
-            // Console.WriteLine($"This card is: {current_card}");
             word.inputGuess();
-            // guess_card = Console.ReadLine();
+            jumper.updateJumper();
         }
 
         public void doUpdates() { }

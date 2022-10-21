@@ -25,16 +25,12 @@ namespace Unit03.Game
             @" /|\",
             @" / \",
         };
-        Word word = new Word();
 
-        private bool letterMatch = false;
+        public bool letterMatch = false;
 
-        public Jumper()
-        {
-            // letterMatch = word.updateHint();
-        }
+        public Jumper() { }
 
-        private void updateJumper()
+        public void updateJumper()
         {
             if (!letterMatch)
             {

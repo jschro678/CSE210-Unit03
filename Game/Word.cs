@@ -7,12 +7,12 @@ namespace Unit03.Game
     {
         private List<string> words = new List<string>
         {
-            "Abuse",
-            "Adult",
-            "Agent",
-            "Anger",
-            "Apple",
-            "Award",
+            "abuse",
+            "adult",
+            "agent",
+            "anger",
+            "apple",
+            "award",
         };
         private string word;
         private List<char> letters = new List<char> { };
@@ -43,7 +43,7 @@ namespace Unit03.Game
             }
         }
 
-        private void updateHint()
+        private void checkGuess()
         {
             foreach (char i in letters)
             {
@@ -59,9 +59,27 @@ namespace Unit03.Game
             }
         }
 
+        private void updateHint()
+        {
+            if (letterMatch = true)
+            {
+                int counter = 0;
+                foreach (char i in letters)
+                {
+                    if (guessLetter == i)
+                    {
+                        hint[counter] = guessLetter;
+                        counter++;
+                    }
+                }
+            }
+        }
+
         public void inputGuess()
         {
             guessLetter = terminalService.Readchar($"Guess a letter [a-z]: ");
+            guessLetter = Char.ToLower(guessLetter);
+            checkGuess();
             updateHint();
         }
 
