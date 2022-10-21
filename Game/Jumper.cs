@@ -28,7 +28,7 @@ namespace Unit03.Game
         };
 
         private bool letterMatch;
-        public bool isPlaying;
+        public bool isPlaying = true;
         TerminalService terminalService = new TerminalService();
 
         public Jumper() { }
