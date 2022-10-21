@@ -18,6 +18,7 @@ namespace Unit03.Game
             "^^^^^^"
         };
         private int lives = 5;
+        Word word = new Word();
         private List<string> deadDrawing = new List<string>
         {
             @"^^^^^^",
@@ -26,13 +27,15 @@ namespace Unit03.Game
             @" / \",
         };
 
-        public bool letterMatch = false;
-        private bool isPlaying = true;
+        private bool letterMatch;
+        public bool isPlaying;
+        TerminalService terminalService = new TerminalService();
 
         public Jumper() { }
 
         public void updateJumper()
         {
+            letterMatch = word.letterMatch;
             if (!letterMatch)
             {
                 lives = lives - 1;
@@ -50,6 +53,8 @@ namespace Unit03.Game
             {
                 return;
             }
+
+            terminalService.displayString(drawing);
         }
     }
 }
