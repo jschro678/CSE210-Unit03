@@ -60,6 +60,16 @@ namespace Unit03.Game
             foreach (var i in list)
             {
                 Console.Write(i);
+                Console.Write(" ");
+            }
+            Console.WriteLine("");
+        }
+
+        public void displayString(List<string> list)
+        {
+            foreach (string i in list)
+            {
+                Console.WriteLine($"{i}\n");
             }
         }
     }

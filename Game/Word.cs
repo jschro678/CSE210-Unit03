@@ -19,19 +19,19 @@ namespace Unit03.Game
         private char guessLetter;
         private TerminalService terminalService = new TerminalService();
         private List<char> hint = new List<char> { };
-        bool letterMatch;
+        public bool letterMatch;
 
-        public Word()
-        {
-            pickWord();
-            createHint();
-        }
+        public Word() { }
 
-        private void pickWord()
+        public void pickWord()
         {
             Random random = new Random();
             int index = random.Next(words.Count);
             word = words[index];
+            createHint();
+            inputGuess();
+            checkGuess();
+            updateHint();
         }
 
         private void createHint()
@@ -76,12 +76,10 @@ namespace Unit03.Game
             terminalService.displaycharList(hint);
         }
 
-        public void inputGuess()
+        private void inputGuess()
         {
             guessLetter = terminalService.Readchar($"Guess a letter [a-z]: ");
             guessLetter = Char.ToLower(guessLetter);
-            checkGuess();
-            updateHint();
         }
     }
 }

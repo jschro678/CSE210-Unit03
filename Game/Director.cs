@@ -23,7 +23,7 @@ namespace Unit03.Game
 
         public void getInputs()
         {
-            word.inputGuess();
+            word.pickWord();
         }
 
         public void doUpdates()
@@ -33,6 +33,7 @@ namespace Unit03.Game
 
         public void getRender()
         {
+            isPlaying = jumper.isPlaying;
             if (!isPlaying)
             {
                 return;
