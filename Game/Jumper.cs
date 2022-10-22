@@ -45,7 +45,7 @@ namespace Unit03.Game
 
 
             //if (letterMatch == false)           // changed the condition
-            if(letterMatchHH > 0)
+            if(letterMatchHH == 0)
             {
                 lives = lives - 1;
                 if (lives > 0)
