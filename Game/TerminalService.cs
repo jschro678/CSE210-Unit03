@@ -62,6 +62,7 @@ namespace Unit03.Game
                 Console.Write(i);
                 Console.Write(" ");
             }
+            System.Console.WriteLine();                 // added a new line
             Console.WriteLine("");
         }
 
@@ -69,7 +70,7 @@ namespace Unit03.Game
         {
             foreach (string i in list)
             {
-                Console.WriteLine($"{i}\n");
+                Console.Write($"{i}\n");
             }
         }
     }
