@@ -25,11 +25,12 @@ namespace Unit03.Game
             @" /|\",
             @" / \",
             @"^^^^^^",
+            "Sorry You lose!"
         };
 
         private bool letterMatch;
-        
-        private int letterMatchHH;          // created this new variable
+
+        private int letterMatchHH; // created this new variable
         public bool isPlaying = true;
         TerminalService terminalService = new TerminalService();
 
@@ -39,8 +40,8 @@ namespace Unit03.Game
         {
             //letterMatch = word.letterMatch;
             letterMatchHH = word.letterMatchHH;
-            
-            if(letterMatchHH == 0)
+
+            if (letterMatchHH == 0)
             {
                 lives = lives - 1;
                 if (lives > 0)
