@@ -13,17 +13,23 @@ namespace Unit03.Game
 
         public void StartGame()
         {
+            generateWord();
             while (isPlaying)
             {
-                getInputs();
+                getInputs();                        // put getInputs out of the loop to above resetting the word every time    
                 doUpdates();
                 getRender();
             }
         }
 
-        public void getInputs()
+        public void generateWord()
         {
             word.pickWord();
+        }
+
+        public void getInputs()
+        {
+            word.evaluateInput();
         }
 
         public void doUpdates()
