@@ -35,16 +35,11 @@ namespace Unit03.Game
 
         public Jumper() { }
 
-                       
-
         public void updateJumper()
         {
             //letterMatch = word.letterMatch;
             letterMatchHH = word.letterMatchHH;
             
-
-
-            //if (letterMatch == false)           // changed the condition
             if(letterMatchHH == 0)
             {
                 lives = lives - 1;
@@ -58,29 +53,6 @@ namespace Unit03.Game
                     isPlaying = false;
                 }
             }
-            // else //if (letterMatch)
-            // {
-            //     return;
-            // }
-
-
-            // if (letterMatch == false)     
-            // {
-            //     lives = lives - 1;
-            //     if (lives > 0)
-            //     {
-            //         drawing.RemoveAt(0);
-            //     }
-            //     else
-            //     {
-            //         drawing = deadDrawing;
-            //         isPlaying = false;
-            //     }
-            // }
-            // else if (letterMatch)
-            // {
-            //     return;
-            // }
 
             terminalService.displayString(drawing);
         }

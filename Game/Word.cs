@@ -240,11 +240,14 @@ namespace Unit03.Game
             // printing to debugg
             System.Console.WriteLine(word);
 
-            createHint(); // moved createHint() out of evaluate Input
-        }
 
-        public void evaluateInput() // made a new method to avoid choosing a word over and over
-        {
+            createHint();
+
+        }    
+            
+        public void evaluateInput()        
+        {            
+
             inputGuess();
             checkGuess();
             updateHint();
@@ -259,49 +262,43 @@ namespace Unit03.Game
             }
         }
 
-        private int checkGuess()
+        private void checkGuess()
         {
-            letterMatchHH = 0; // setting letterMatchHH to 0
-            letterMatch = false;
+
+            letterMatchHH = 0; 
+            //letterMatch = false;
 
             foreach (char i in letters)
             {
-                //letterMatch = (guessLetter == i) ? true : false;        // it is the same condition, just different syntax
+                //letterMatch = (guessLetter == i) ? true : false; 
 
                 if (guessLetter == i)
                 {
-                    letterMatch = true;
+                    //letterMatch = true;
                     letterMatchHH++;
-                    //return;
                 }
 
-                // else //if (guessLetter != i)
-                // {
-                //     letterMatch = false;
-                // }
+
             }
 
-            return letterMatchHH;
-            // if (letterMatch == true)
-            // {
-            //     letterMatchHH++;
-            // }
+
         }
 
         private void updateHint()
         {
-            //if (letterMatch == true)                // there was only one "=", it should be "=="
             if (letterMatchHH > 0)
             {
-                int counter = 0;
+                //int counter = 0;
                 int indexHH = -1;
                 foreach (char i in letters)
                 {
                     indexHH++;
                     if (guessLetter == i)
                     {
-                        hint[indexHH] = guessLetter; // created a new indexHH, instead of counter
-                        counter++;
+
+                        hint[indexHH] = guessLetter;
+                        //counter++;
+
                     }
                 }
             }
