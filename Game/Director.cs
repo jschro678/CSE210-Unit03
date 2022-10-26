@@ -34,7 +34,7 @@ namespace Unit03.Game
 
         public void doUpdates()
         {
-            jumper.updateJumper();
+            jumper.updateJumper(word);
         }
 
         public void getRender()

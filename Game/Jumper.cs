@@ -18,7 +18,7 @@ namespace Unit03.Game
             "^^^^^^"
         };
         private int lives = 5;
-        Word word = new Word();
+        //Word word = new Word();
         private List<string> deadDrawing = new List<string>
         {
             @"  X",
@@ -36,7 +36,7 @@ namespace Unit03.Game
 
         public Jumper() { }
 
-        public void updateJumper()
+        public void updateJumper(Word word)
         {
             //letterMatch = word.letterMatch;
             letterMatchHH = word.letterMatchHH;
