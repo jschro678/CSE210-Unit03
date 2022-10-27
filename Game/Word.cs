@@ -224,7 +224,7 @@ namespace Unit03.Game
         private List<char> letters = new List<char> { };
         private char guessLetter;
         private TerminalService terminalService = new TerminalService();
-        private List<char> hint = new List<char> { };
+        public List<char> hint = new List<char> { };
         public bool letterMatch; // added the false value
 
         public int letterMatchHH = 0; // created a new int
@@ -237,12 +237,10 @@ namespace Unit03.Game
             int index = random.Next(words.Count);
             word = words[index];
 
-            // printing to debugg
-            System.Console.WriteLine(word);
-
+            //System.Console.WriteLine(word);
 
             createHint();
-
+            terminalService.displaycharList(hint);
         }    
             
         public void evaluateInput()        
@@ -278,11 +276,7 @@ namespace Unit03.Game
                     letterMatchHH++;
 
                 }
-
-
             }
-
-
         }
 
         private void updateHint()
@@ -296,15 +290,17 @@ namespace Unit03.Game
                     indexHH++;
                     if (guessLetter == i)
                     {
-
                         hint[indexHH] = guessLetter;
                         //counter++;
-
-                    }
+                    } 
                 }
             }
             terminalService.displaycharList(hint);
         }
+
+
+
+
 
         private void inputGuess()
         {
