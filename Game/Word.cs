@@ -219,7 +219,7 @@ namespace Unit03.Game
             "woman",
             "world",
             "youth"
-        };
+        }; 
         private string word;
         private List<char> letters = new List<char> { };
         private char guessLetter;
