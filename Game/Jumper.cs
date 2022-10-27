@@ -25,24 +25,24 @@ namespace Unit03.Game
             @" /|\",
             @" / \",
             @"^^^^^^",
+            "Sorry You lose!"
         };
 
         private bool letterMatch;
+
         
         private int letterMatchHH;          // created this new variable
 
         public List<char> hint = new List<char> { };
-        public bool isPlaying = true;
-        TerminalService terminalService = new TerminalService();
+=======
 
-        public Jumper() { }
+        private int letterMatchHH; // created this new variable
 
-        public void updateJumper(Word wordInstance)
-        {
-            //letterMatch = word.letterMatch;
+
             letterMatchHH = wordInstance.letterMatchHH;
             hint = wordInstance.hint;
             if(letterMatchHH == 0)
+
             {
                 lives = lives - 1;
                 if (lives > 0)
